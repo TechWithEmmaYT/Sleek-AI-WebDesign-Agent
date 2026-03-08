@@ -102,7 +102,7 @@ async function runGenerationWorker({
       pages: pages.map((page: any) => ({
         id: page.id,
         name: page.name,
-        done: generationPages.some((p: any) => page.name === page.name)
+        done: generationPages.some((gp: any) => gp.name === page.name)
       }))
     }, { id: "gen-card" })
 
@@ -175,7 +175,7 @@ ${page.rootStyles}
 
     generationPages.push({
       name: page.name,
-      htmlContent: page.htmlContent
+      htmlContent: htmlContent
     })
 
     emit(writer, "generation", {
@@ -184,7 +184,7 @@ ${page.rootStyles}
       pages: pages.map((page: any) => ({
         id: page.id,
         name: page.name,
-        done: generationPages.some((p: any) => page.name === page.name)
+        done: generationPages.some((gp: any) => gp.name === page.name)
       }))
     }, { id: "gen-card" })
 
