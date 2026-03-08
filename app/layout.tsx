@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
+import { InsforgeProvider } from "@/components/insforge-provider";
+import { QueryProvider } from "@/components/query-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +33,26 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <InsforgeProvider>
+          <QueryProvider>
+            <NuqsAdapter>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <TooltipProvider>
+                  {children}
+
+                  <Toaster richColors />
+                </TooltipProvider>
+              </ThemeProvider>
+
+            </NuqsAdapter>
+          </QueryProvider>
+        </InsforgeProvider>
+
       </body>
     </html>
   );
