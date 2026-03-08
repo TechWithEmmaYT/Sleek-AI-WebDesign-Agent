@@ -628,8 +628,11 @@ export async function POST(request: NextRequest) {
     ${selectedPage && isRegen
                           ? `EDITING THIS PAGE:\n- Name: ${selectedPage.name}\n- Current Styles:\n${selectedPage.rootStyles}\n- Current HTML:\n${selectedPage.htmlContent}\nBe surgical apply only requested changes.\n\n`
                           : selectedPage && !isRegen
-                            ? `STYLE REFERENCE (match this visual DNA(e.g logo, font, color, etc) for new pages):\n- Name: ${selectedPage.name}\n- Styles:\n${selectedPage.rootStyles}\n\n`
-                            : ''}
+                            ? `STYLE REFERENCE (match this brand DNA):
+                              - Name: ${selectedPage.name}
+                              - Brand Colors & Fonts: See Styles below.
+                              - Logo/Header Pattern: ${selectedPage.htmlContent.substring(0, 1500)}
+                              - Styles:${selectedPage.rootStyles}\n\n` : ''}
         ${hasExistingPages && !isRegen
                           ? `EXISTING PAGES (do NOT recreate):\n${existingPages!.map((p: any) => `- ${p.name}\n${p.rootStyles}`).join('\n')}\n\n`
                           : ''}
