@@ -24,7 +24,7 @@ RULES:
 2. User wants to MODIFY or ADD TO an existing page (section, element, style change) → regenerate.
 3. "for this", "like this", "based on this" = style reference, not modification → generate.
 4. Affirmations continuing a build ("yes", "do it", "build it") → generate.
-5. Questions, brainstorming, greetings, or anything unclear → chat.
+5. Questions, brainstorming, greetings, or requests for a "prompt", "idea", or "blueprint" → chat.
 6. When in doubt → chat.
 
 CRITICAL OUTPUT RULES:
