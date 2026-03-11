@@ -2,7 +2,7 @@
 import { useChat } from "@ai-sdk/react"
 import { generateSlugId } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { DefaultChatTransport, UIMessage } from "ai";
 import { toast } from "sonner";
 import { PromptInputMessage } from "../ai-elements/prompt-input";
@@ -43,7 +43,9 @@ const ChatInterface = ({
       if (!res.ok) throw new Error("Failed to fetch project");
       return res.json() as Promise<{ title: string; messages: UIMessage[]; pages: PageType[] }>
     },
-    enabled: isProjectPage
+  enabled: isProjectPage, // Only fetch on project page
+  refetchOnWindowFocus: false, // Prevent breaking stream when switching tabs
+  staleTime: 1000 * 60 * 5, // 5 minutes cache
   })
 
   const { messages, sendMessage, setMessages, status, error,
@@ -133,6 +135,17 @@ const ChatInterface = ({
     }
   })
 
+  // Sync messages when data is initially loaded
+  // We use a ref to track the last synced slugId to ensure we only sync once per project,
+  const lastSyncedSlug = useRef<string | null>(null);
+
+  useEffect(() => {
+      if (projectData && slugId !== lastSyncedSlug.current) {
+          if (projectData.messages) setMessages(projectData.messages);
+          if (projectData.pages) setPages(projectData.pages);
+          lastSyncedSlug.current = slugId;
+      }
+  }, [projectData, slugId, setMessages]);
 
 
   useEffect(() => {
@@ -156,10 +169,7 @@ const ChatInterface = ({
     )
   }, [pathname, hasStarted, isProjectPage, setMessages])
 
-  useEffect(() => {
-    if (projectData?.messages) setMessages(projectData.messages);
-    if (projectData?.pages) setPages(projectData.pages)
-  }, [projectData?.messages, projectData?.pages])
+
 
   const { selectedPageId } = useCanvas()
 
