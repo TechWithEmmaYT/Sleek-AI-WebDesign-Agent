@@ -56,7 +56,7 @@ If this project helps you, you can support my work by:
    * `google/gemini-2.5-pro`
    * `google/gemini-3.1-pro-preview`
    * `google/gemini-2.5-flash-lite`
-5. Watch the video to see how to create the **projects, messages, and pages tables**.
+5. Watch the video to see how to create tables**.
 ---
 
 ## License Information
