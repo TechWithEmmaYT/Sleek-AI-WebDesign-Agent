@@ -52,30 +52,11 @@ If this project helps you, you can support my work by:
 2. Create a **project** and connect it to your AI code editor.
 3. Go to **Settings** → copy your `BASE_URL` & `APIKEY` → paste into your `.env` file.
 4. Enable the following AI models in **Model Gateway**:
-
    * `anthropic/claude-sonnet-4.5`
    * `google/gemini-2.5-pro`
    * `google/gemini-3.1-pro-preview`
    * `google/gemini-2.5-flash-lite`
 5. Watch the video to see how to create the **projects, messages, and pages tables**.
-6. Update your `.env` file as follows:
-7. Explore the following files for integration:
-
-   * `/lib/insforge-client.ts`
-   * `/lib/insforge-server.ts`
-   * `/app/auth/route.ts`
-   * `/proxy.ts`
-
-8. Run the project locally:
-
-```bash
-# Install dependencies
-npm install
-
-# Run dev server
-npm run dev
-```
-
 ---
 
 ## License Information
