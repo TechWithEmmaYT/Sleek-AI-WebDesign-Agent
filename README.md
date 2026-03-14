@@ -38,8 +38,7 @@ If this project helps you, you can support my work by:
 * 🔁 Regenerate designs instantly
 * 💬 Chat interface for design guidance
 * ⚡ Real-time design updates
-* 🪝 Background workflows with Insforge
-* 🌐 Built with **Next.js 16, React, Insforge**
+* 🌐 Built with **Next.js 16, React, Insforge, Claude AI, Gemini AI**
 * 🎨 Styled with **Tailwind CSS + Shadcn/UI**
 * 🚀 Deployment-ready
 
