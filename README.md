@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Sleek.ai – AI Web Design Agent
 
-## Getting Started
+> ### Commercial License Required
+>
+> This project is **Free for Personal Use**. A commercial license is **required** for any use of the code (in part or whole) for SaaS, client work, or production apps.
+>
+> 👉 **[Get Commercial License & Code ENVs](https://techwithemma.gumroad.com/l/ogphz)**
+> 👉 **[Read License Terms](https://github.com/TechWithEmmaYT/Sleek-AI-Web-Design-Agent/blob/main/TECHWITHEMMA-LICENSE.md)**
 
-First, run the development server:
+---
+
+## ❤️ Support the Channel
+
+If this project helps you, you can support my work by:
+
+* 🟢 [Try Insforge](https://insforge.dev/?utm_source=techwithemma)
+* ☕ [Buy Me a Coffee](https://dub.sh/buy-me-coffee)
+* 🎥 [Subscribe on YouTube](https://tinyurl.com/subcribe-to-techwithEmma)
+* 🌟 Star this repository
+
+---
+
+## Watch the Full Build on YouTube
+
+> In this video, you’ll build **Sleek.ai**, an AI-powered Web Design Agent from scratch. Learn how to generate web landing pages, dashboards, login screens, and more — with real-time updates, chat interface, canvas interactions, and full deployment.
+
+👉 [Watch the Full Tutorial](https://www.youtube.com/watch?v=cLhjBkfsyvY)
+
+---
+
+## 🗝️ Key Features 👇
+
+* 🔐 Authentication with **Insforge**
+* 🤖 AI-powered Web UI Design Agent
+* ✍️ Generate clean web designs from simple prompts
+* 🎨 Customizable themes & color schemes
+* 🖼️ Draggable web canvas
+* 🔁 Regenerate designs instantly
+* 💬 Chat interface for design guidance
+* ⚡ Real-time design updates
+* 🪝 Background workflows with Insforge
+* 🌐 Built with **Next.js 16, React, Insforge**
+* 🎨 Styled with **Tailwind CSS + Shadcn/UI**
+* 🚀 Deployment-ready
+
+---
+
+## Getting Started / Running the Code
+
+1. **Sign up on Insforge:**
+   👉 [https://insforge.dev/?utm_source=techwithemma](https://insforge.dev/?utm_source=techwithemma)
+2. Create a **project** and connect it to your AI code editor.
+3. Go to **Settings** → copy your `BASE_URL` & `APIKEY` → paste into your `.env` file.
+4. Enable the following AI models in **Model Gateway**:
+
+   * `anthropic/claude-sonnet-4.5`
+   * `google/gemini-2.5-pro`
+   * `google/gemini-3.1-pro-preview`
+   * `google/gemini-2.5-flash-lite`
+5. Watch the video to see how to create the **projects, messages, and pages tables**.
+6. Update your `.env` file as follows:
+7. Explore the following files for integration:
+
+   * `/lib/insforge-client.ts`
+   * `/lib/insforge-server.ts`
+   * `/app/auth/route.ts`
+   * `/proxy.ts`
+
+8. Run the project locally:
 
 ```bash
+# Install dependencies
+npm install
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Commercial use requires a paid license.
+👉 [Get a Commercial License](https://techwithemma.gumroad.com/l/ogphz)
 
-## Learn More
+For full license details, see [TECHWITHEMMA-LICENSE.md](https://github.com/TechWithEmmaYT/Sleek-AI-Web-Design-Agent/blob/main/TECHWITHEMMA-LICENSE.md)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📺 Subscribe for More Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I build real-world SaaS, AI agents, and production-grade systems.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔔 Subscribe here:
+👉 [https://tinyurl.com/subcribe-to-techwithEmma](https://tinyurl.com/subcribe-to-techwithEmma)
